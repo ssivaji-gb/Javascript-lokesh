@@ -113,40 +113,4 @@
 // console.log(mtArr)
 
 
-// let arr=[1,2,3,4,5,6,7,8,9]
-// let ass=[]
-// for (let i = 0; i < arr.length; i++) {
-// for(let j=1;j<arr.length;j++){
-// if(arr[i]-arr[j]){
-//   ass+=arr[i]-arr[j]
-// }
-  
-// }
-// }
-
-// console.log(ass)
-
-
-
-// function assDess(arr,callback){
-//   callback(arr)
-// }
-
-// function ass(ar){
-//   for(let i=0;i<ar.length;i++){
-//   for(let j=i+1;j<ar.length;j++){
-//     if(ar[i]<ar[j]){
-//       let temp=ar[i]
-//       ar[i]=ar[j]
-//       ar[j]=temp
-//     }
-//   }
-// }
-// return ar
-// }
-
-// let arr=[3,4,5,6,54,32,5,2,5,67]
-// let aD=assDess(arr,ass)
-// console.log(aD)
-
 
