@@ -58,6 +58,48 @@
 
 // 4.Assending and descending two arguments passed
 
+///method-1
+
+// function assDess(value,callback){
+//   return callback(value)
+// }
+
+// function ascSort(arr){
+//   for(let i=0;i<arr.length;i++){
+//     for(let j=i+1;j<arr.length;j++){
+//       if(arr[i]>arr[j]){
+//         let temp = arr[i]
+//         arr[i]=arr[j]
+//         arr[j]=temp
+//       }
+//     }
+//   }
+//   return arr;
+// }
+
+// function descSort(arr){
+//   for(let i=0;i<arr.length;i++){
+//     for(let j=i+1;j<arr.length;j++){
+//       if(arr[i]<arr[j]){
+//         let temp = arr[i]
+//         arr[i]=arr[j]
+//         arr[j]=temp
+//       }
+//     }
+//   }
+//   return arr;
+// }
+
+// let arr=[-1,5,2,-2]
+// let AD=assDess(arr,ascSort)
+// console.log(AD)
+
+
+
+    
+
+
+//method-2
 // function assDess(value,callback,method){
 //   return callback(value,method)
 // }
@@ -114,3 +156,7 @@
 
 
 
+for(let i=65;i<=122;i++){
+    console.log(String.fromCharCode(i));
+    
+}
