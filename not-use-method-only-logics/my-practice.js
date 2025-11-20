@@ -45,7 +45,6 @@
 // users.push(1)
 // console.log(users);
 
-
 // 2.Fruits array-il “Mango” add pannunga.
 
 // let users = ["Arun", "Kavi", "Muthu", "Deepa"];
@@ -61,7 +60,6 @@
 // users.push("siva")
 // users.push("eeecc")
 // console.log(users);
-
 
 // 4.User input-like object {name, age} push pannunga.
 // let users=[]
@@ -90,14 +88,11 @@
 // let ne=arr.map(n=>n+5)
 // console.log(ne);
 
-
-
 // 3.Names array → எல்லாம் capital letters-la convert pannunga.
 
 // let users = ["Arun", "Kavi", "Muthu", "Deepa"];
 // let ne=users.map(n=>n.toUpperCase())
 // console.log(ne);
-
 
 // 4.Product list → just price மட்டும் return pannunga.
 
@@ -105,7 +100,25 @@
 // let ne=arr.map(n=>n.price)
 // console.log(ne);
 
-
 // 5.Student list → pass/fail array create pannunga.
 
+//checking odd number
 
+let value = [1,2,34,3,4,5,7,23,12];
+
+function checkingOdd(arr) {
+  let count = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+      count++;
+    }
+  }
+    if (count >= 3) {
+        return true;
+      } else {
+        return false;
+      }
+}
+let sum = checkingOdd(value);
+console.log(sum);
