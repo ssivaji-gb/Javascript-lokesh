@@ -155,3 +155,13 @@
 // console.log(mtArr)
 
 
+let colors = [
+    "#FF5733", "#33FF57", "#5733FF", "#FF33F5", "#33F5FF",
+    "#FFB347", "#47FFB3", "#B347FF", "#FF47B3", "#47B3FF",
+    "#FFD700", "#00FFD7", "#D700FF", "#FF00D7", "#00D7FF",
+    "#FF8C00", "#00FF8C", "#8C00FF", "#FF008C", "#008CFF"
+];
+
+let ran=Math.floor(Math.random()*colors.length)
+console.log(colors[ran]);
+

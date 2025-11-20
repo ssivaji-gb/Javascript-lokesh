@@ -1,0 +1,186 @@
+<!---------------------- 1.button click show-hello javascript -------------------------->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+
+
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: olivedrab;
+    color: rgb(200, 231, 168);
+    margin:auto;
+    margin-top: 15%;
+}
+div button{
+    background-color: blanchedalmond;
+    color: brown;
+    margin-bottom: 30px;
+    border: none;
+    width: 20%;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+    <h1 id="box">WELCOME</h1>
+<button onclick="Change()">Change</button>
+</div>
+<script>
+let h1=document.getElementById("box")
+function Change(){
+h1.textContent="HELLO JAVASCRIT"
+}
+</script>
+</body>
+</html> -->
+
+<!-- ---------------------------------------2.Random color ------------------------------>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random color</title>
+    <style>
+body{
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+
+}
+    button{
+    background-color: blanchedalmond;
+    color: brown;
+    margin-bottom: 30px;
+    border: none;
+    width: 20%;
+}
+    </style>
+</head>
+<body id="colr">
+    <button onclick="colorChange()">Random collor</button>
+    <script>
+let colors = [
+    "#FF5733", "#33FF57", "#5733FF", "#FF33F5", "#33F5FF",
+    "#FFB347", "#47FFB3", "#B347FF", "#FF47B3", "#47B3FF",
+    "#FFD700", "#00FFD7", "#D700FF", "#FF00D7", "#00D7FF",
+    "#FF8C00", "#00FF8C", "#8C00FF", "#FF008C", "#008CFF"
+];
+
+
+function colorChange(){
+
+let ran=Math.floor(Math.random()*colors.length)
+    document.body.style.backgroundColor=colors[ran]
+}
+    </script>
+</body>
+</html>  -->
+
+
+
+<!--------------------------------- 3. counter ---------------------------------------->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+body{
+background-color: rgb(124, 31, 49);
+display: flex;
+justify-content: center;
+align-items: center;
+  }      
+.main{
+width: 50%;
+height: 500px;
+border-radius: 20%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-color: rgb(224, 130, 130);
+}
+
+#para{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border-radius: 30px;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    width: 50%;
+   
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+h1{
+    color: #FFFFFF;
+}
+button{
+width: 50%;
+ height: 100px;
+ font-size: 50px;
+} 
+ </style>
+</head>
+<body>
+    <div class="main">
+        <div id="para">
+            <h1 id="ch" style="font-size: 50px;">0</h1>
+        </div>
+        <div class="btn">
+            <button onclick="small()">-</button>
+            <button onclick="large()">+</button>
+        </div>
+    </div>
+ <script>
+let num =0
+let h1=document.getElementById("para")
+function large(){
+    num++
+    h1.textContent=num
+    if(num>=1){
+    h1.style.backgroundColor="green"
+    h1.style.fontSize="50px"
+    }else if(num===0){
+        h1.style.backgroundColor="black"
+    }
+}
+function small(){
+    num--
+    h1.textContent=num
+    if(num<=-1){
+    h1.style.background="red"
+    }else if(num===0){
+        h1.style.backgroundColor="black"
+    }
+}
+ </script>
+</body>
+</html>  -->
