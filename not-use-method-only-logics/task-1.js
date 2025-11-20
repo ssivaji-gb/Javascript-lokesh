@@ -155,8 +155,3 @@
 // console.log(mtArr)
 
 
-
-for(let i=65;i<=122;i++){
-    console.log(String.fromCharCode(i));
-    
-}
