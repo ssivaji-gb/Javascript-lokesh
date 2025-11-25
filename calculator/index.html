@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #3a86a0;
+      }
+
+      .main {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+        padding: 20px;
+        background: #e7f4f8;
+        border-radius: 16px;
+        max-width: 500px;
+        margin: 13% auto;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      }
+
+      .inp {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        height: 165px;
+        background: #ffffff;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      }
+
+      .inp label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #3a86a0;
+      }
+
+      .inp input[type="text"] {
+        padding: 12px 14px;
+        font-size: 15px;
+        border: 1px solid #cbd5e1;
+        border-radius: 8px;
+        background: #f8fafc;
+        outline: none;
+        transition: 0.2s ease;
+      }
+
+      .inp input::placeholder {
+        color: #6b7280;
+      }
+
+      .inp input:focus {
+        border-color: #3a86a0;
+        background: #ffffff;
+        box-shadow: 0 0 0 4px rgba(58, 134, 160, 0.15);
+      }
+      .result {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 80%;
+        height: 30px;
+        background: #ffffff;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      }
+
+      .btn {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .btn-1,
+      .btn-2 {
+        display: flex;
+        gap: 12px;
+      }
+
+      button {
+        height: 30px;
+        width: 100px;
+        background-color: white;
+        color: #0b5fa7;
+        padding: 10px;
+        border-radius: 18px;
+        border: none;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0b5fa7;
+        color: white;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="inp">
+        <label for="Number1">Number 1</label>
+        <input
+          type="text"
+          name="Number1"
+          placeholder=" Enter the Number"
+          id="Number1"
+          class="Number1"
+          autocomplete="off"
+        />
+        <label for="Number2">Number 2</label>
+        <input
+          type="text"
+          name="Number2"
+          placeholder=" Enter the Number"
+          autocomplete="off"
+          class="Number2"
+          id="Number2"
+        />
+      </div>
+      <div class="btn">
+        <div class="btn-1">
+          <button class="in-btn" id="sub">-</button
+          ><button class="in-btn " id="add">+</button>
+        </div>
+        <div class="btn-2">
+          <button class="in-btn " id="mul">*</button
+          ><button class="in-btn " id="divs">/</button>
+        </div>
+        <div class="reset btn-2">
+          <button class="in-btn " id="modul">%</button><button id="reset">Reset</button>
+        </div>
+        <div class="result"></div>
+        <p id="ans"></p>
+      </div>
+    </div>
+    <script>
+     
+      let result = 0;
+let sub = document.querySelector("#sub");
+let add=document.querySelector("#add")
+let mul=document.querySelector("#mul")
+let divs=document.querySelector("#divs")
+let modul=document.querySelector("#modul")
+let reset=document.querySelector("#reset")
+
+sub.addEventListener('click', subtraction);
+
+function subtraction() {
+
+
+  let inp1 = document.getElementById("Number1");
+  let inp2 = document.getElementById("Number2");
+
+  if (inp1.value.trim() === "" || inp2.value.trim() === "") {
+    alert("Both numbers are required!");
+    return;
+  }else{
+
+  let num1 = Number(inp1.value);
+  let num2 = Number(inp2.value);
+
+  result = num1 - num2;
+
+  }
+  document.querySelector(".result").textContent = "Result: " + result;
+}
+add.addEventListener('click',additoin)
+function additoin() {
+    let inp1 = document.getElementById("Number1");
+  let inp2 = document.getElementById("Number2");
+
+  if (inp1.value.trim() === "" || inp2.value.trim() === "") {
+    alert("Both numbers are required!");
+    return;
+  }else{
+
+  let num1 = Number(inp1.value);
+  let num2 = Number(inp2.value);
+
+  result = num1 + num2;
+
+  }
+  document.querySelector(".result").textContent = "Result: " + result;
+}
+mul.addEventListener('click',multiplicaton)
+function multiplicaton() {
+    let inp1 = document.getElementById("Number1");
+  let inp2 = document.getElementById("Number2");
+
+  if (inp1.value.trim() === "" || inp2.value.trim() === "") {
+    alert("Both numbers are required!");
+    return;
+  }else{
+
+  let num1 = Number(inp1.value);
+  let num2 = Number(inp2.value);
+
+  result = num1 * num2;
+
+  }
+  document.querySelector(".result").textContent = "Result: " + result;
+}
+divs.addEventListener('click',division)
+function division() {
+    let inp1 = document.getElementById("Number1");
+  let inp2 = document.getElementById("Number2");
+
+  if (inp1.value.trim() === "" || inp2.value.trim() === "") {
+    alert("Both numbers are required!");
+    return;
+  }else{
+
+  let num1 = Number(inp1.value);
+  let num2 = Number(inp2.value);
+
+  result = num1 / num2;
+
+  }
+  document.querySelector(".result").textContent = "Result: " + result;
+}
+modul.addEventListener('click',modulus)
+function  modulus() {
+    let inp1 = document.getElementById("Number1");
+  let inp2 = document.getElementById("Number2");
+
+  if (inp1.value.trim() === "" || inp2.value.trim() === "") {
+    alert("Both numbers are required!");
+    return;
+  }else{
+
+  let num1 = Number(inp1.value);
+  let num2 = Number(inp2.value);
+
+  result = num1 % num2;
+
+  }
+  document.querySelector(".result").textContent = "Result: " + result;
+}
+reset.addEventListener('click',reSet)
+function reSet() {
+  
+}
+    </script>
+  </body>
+</html>
