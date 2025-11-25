@@ -254,6 +254,6 @@ About
   background-color: #49a6e9;
   color: white;
 }
-.content.active {
-  display: block;
-}
+ /* .content.active {
+  display: block; 
+}  */

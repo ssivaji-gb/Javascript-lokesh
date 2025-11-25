@@ -86,6 +86,19 @@
       </div>
     </section>
     <!-- javascript -->
-    <script src="index1.js"></script>
+    <script >
+      let btn = document.querySelectorAll(".tab-btn")
+      let content=document.querySelectorAll(".content")
+      btn.forEach((button,index)=>{
+        button.addEventListener('click',()=>{
+          let isOPen=content[index].style.display==="block"
+          content.forEach(ct=>{ct.style.display="none"})
+
+          if(!isOPen){
+            content[index].style.display="block"
+          }
+        })
+      })
+    </script>
   </body>
 </html>
